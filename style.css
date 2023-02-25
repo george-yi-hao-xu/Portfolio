@@ -82,6 +82,22 @@ body{
 .risd-blue{
     color:var(--color-risdBlue);
 }
+.risd-yellow{
+    color:var(--color-header-bg);
+}
+/* become yellow when hover */
+.hover-yellow{
+    transition: 0.2s ease-in;
+}
+.hover-yellow:hover{
+    color:var(--color-header-bg);
+}
+.hover-blue{
+    transition: 0.2s ease-in;
+}
+.hover-blue:hover{
+    color:var(--color-risdBlue);
+}
 
 /* main */
 main{
