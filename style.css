@@ -33,6 +33,7 @@ body{
     width: 100%;
     height: 100%;
     padding: 0;
+    min-width: 1200px; /* prevent chaos in mobile phone view */
 
     font-family: var(--font-body);
     font-size: var(--font-size-body-base);
