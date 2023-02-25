@@ -122,12 +122,20 @@ main{
     height: calc(100vh - var(--height-header-container));
     position: relative;
     display: block;
-    margin-top: 90px;
     padding: 0;
     z-index: 15;
 }
 
 /* typed.js */
+.title-contents{
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .type-container{
     display: block;
     margin: 0 auto;
