@@ -1,0 +1,149 @@
+:root{
+    /* font family */
+    --font-title: "Open Sans", sans-serif;
+    --font-body: "Rufina", sans-serif;
+
+    /* font size */
+    --font-size-body-small: 13px;
+    --font-size-body-base: 15px;
+    --font-size-body-large: 17px;
+
+    --font-size-title-base: 30px;
+    --font-size-title-large: 40px;
+
+    /* div height */
+    --height-header-container: 45px;
+
+    /* color */
+    --color-header-bg: #FF7900;
+    --color-risdBlue:	#2454FF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+
+    scroll-behavior: smooth;
+    box-sizing:border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+
+    font-family: var(--font-body);
+    font-size: var(--font-size-body-base);
+}
+
+.header-container{
+    margin: 0;
+    padding: 10px;
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: var(--height-header-container);
+
+    font-family: var(--font-title);
+    background-color: var(--color-header-bg);
+}
+
+.logo a{
+    position: absolute;
+    left:10px;
+    bottom: -10px;
+    color: white;
+    font-family: var(--font-title);
+    font-weight: bold;
+    font-size: var(--font-size-title-large);
+    width: 600px;
+}
+
+.navbar{
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+
+.navbar li{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.navbar a{
+    color: white;
+}
+
+/* risd blue color*/
+.risd-blue{
+    color:var(--color-risdBlue);
+}
+
+/* main */
+main{
+    width: 100%;
+    margin-top: var(--height-header-container);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* title*/ 
+.title-container{
+    width: 100%;
+    height: calc(100vh - var(--height-header-container));
+    display: block;
+}
+
+.inner-title-box{
+    width: 600px;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.title{
+    margin: 30px 0;
+}
+
+.title h1{
+    font-size: var(--font-size-title-base)
+}
+
+.title span{
+    font-size: 0.75em;
+}
+
+/* exploreWorkBtn */
+.exploreWorkBtn{
+    padding-top: 60px;
+}
+
+.exploreWorkBtn a{
+	border: solid 1px black;
+    font-size: var(--font-size-body-base);
+    padding: 10px 30px;
+    transition: 0.5s ease-in;
+}
+
+.exploreWorkBtn a:hover{
+    border: solid 1px var(--color-risdBlue);
+    box-shadow: inset 900px 0 100px 0 var(--color-header-bg);
+    cursor: pointer;
+    color: var(--color-risdBlue);
+}
+
+/* content */
+.empty-div{
+    height:3000px;
+}
+
+/* footer */
+footer{
+    bottom: 0;
+}
