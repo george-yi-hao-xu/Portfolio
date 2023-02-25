@@ -9,7 +9,7 @@
     --font-size-body-large: 17px;
 
     --font-size-title-base: 30px;
-    --font-size-title-large: 40px;
+    --font-size-title-large: 60px;
 
     /* div height */
     --height-header-container: 45px;
@@ -37,7 +37,9 @@ body{
     font-family: var(--font-body);
     font-size: var(--font-size-body-base);
 }
-
+.hide{
+    display: none;
+}
 .header-container{
     margin: 0;
     padding: 10px;
@@ -55,7 +57,7 @@ body{
 .logo a{
     position: absolute;
     left:10px;
-    bottom: -10px;
+    bottom: -15px;
     color: white;
     font-family: var(--font-title);
     font-weight: bold;
@@ -98,6 +100,12 @@ body{
 .hover-blue:hover{
     color:var(--color-risdBlue);
 }
+.white-bg{
+    background-color: white;
+}
+.grey-bg{
+    background-color: grey;
+}
 
 /* main */
 main{
@@ -112,15 +120,28 @@ main{
 .title-container{
     width: 100%;
     height: calc(100vh - var(--height-header-container));
+    position: relative;
     display: block;
+    margin-top: 90px;
+    padding: 0;
+    z-index: 15;
+}
+
+/* typed.js */
+.type-container{
+    display: block;
+    margin: 0 auto;
+    width: 900px;
+    height: 100px;
+    z-index: 18;
+    text-align: left;
 }
 
 .inner-title-box{
-    width: 600px;
-    position: relative;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    display: block;
+    margin: 0 auto;
+    width: 900px;
+    z-index: 16;
 }
 
 .title{
@@ -128,7 +149,7 @@ main{
 }
 
 .title h1{
-    font-size: var(--font-size-title-base)
+    font-size: var(--font-size-title-large)
 }
 
 .title span{
@@ -154,6 +175,42 @@ main{
     color: var(--color-risdBlue);
 }
 
+/* works */
+.work-container{
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: -150px;
+    z-index: 10;
+}
+
+.work-container-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 60px auto;
+}
+
+.single-work{
+    display: inline-block;
+    width: 300px;
+    height:400px;
+}
+
+.single-work img{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height:200px;
+    object-fit: cover;
+}
+
+.single-work h3{
+    display: block;
+    margin: 10px auto;
+    font-size: var(--font-size-title-base);
+}
+
 /* content */
 .empty-div{
     height:3000px;
@@ -162,4 +219,42 @@ main{
 /* footer */
 footer{
     bottom: 0;
+}
+
+
+/* animation */
+.toBlue{
+    animation-duration: 1s;
+    animation-name: toBlue;
+    animation-fill-mode: forwards;
+}
+
+@keyframes toBlue{
+    0%{
+        
+    }
+
+    100%{
+        color: var(--color-risdBlue)
+    }
+}
+
+.blueYellowColorGradient{
+    animation-duration: 1s;
+    animation-name: blueYellowColorGradient;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blueYellowColorGradient{
+    0%{
+        color: var(--color-header-bg);
+    }
+
+    50%{
+        color: var(--color-risdBlue);
+    }
+
+    100%{
+        color: var(--color-header-bg);
+    }
 }
