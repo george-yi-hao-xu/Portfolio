@@ -232,14 +232,34 @@ main a{
     cursor: pointer;
 }
 
+/* division hr line */
+.hr-container{
+    height: 60px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hr-line{
+    display: inline-block;
+    width: 60px;
+    height:1px;
+    background-color: white;
+}
+.hr-text{
+    color: white;
+    vertical-align: middle;
+    margin: 0 15px;
+}
 /* works */
+
 .work-container{
     display: block;
     width: 70%;
     min-width: 1100px;
     margin: 10px auto;
     margin-top: -150px;
-    margin-bottom: 90px;
+    margin-bottom: 150px;
     padding-top: var(--height-header-container);
     padding-left: 60px;
     padding-right:60px;
@@ -356,8 +376,15 @@ main a{
 
 /* footer */
 footer{
+    color: black;
     bottom: 0;
-    height: 100px;
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+footer a{
+    color:black;
 }
 
 
