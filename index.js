@@ -36,10 +36,10 @@ $(()=>{
         loop: true,
         showCursor: false,
         onBegin: () => {
-            $('#typed').removeClass("toBlue");
+            $('#typed').removeClass("toOrange");
         },
         onComplete: () => {
-            $('#typed').addClass("toBlue");
+            $('#typed').addClass("toOrange");
         },
       };
     var typed = new Typed('#typed', options);

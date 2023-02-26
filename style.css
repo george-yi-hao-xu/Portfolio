@@ -38,6 +38,20 @@ body{
     font-family: var(--font-body);
     font-size: var(--font-size-body-base);
 }
+
+/* main */
+main{
+    width: 100%;
+    margin-top: var(--height-header-container);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main a{
+    color:black;
+}
+
 .hide{
     display: none;
 }
@@ -86,20 +100,21 @@ body{
     color:var(--color-risdBlue);
 }
 .risd-yellow{
-    color:var(--color-header-bg);
+    color:var(--color-header-bg) !important; 
 }
 /* become yellow when hover */
 .hover-yellow{
     transition: 0.2s ease-in;
 }
 .hover-yellow:hover{
-    color:var(--color-header-bg);
+    color:var(--color-header-bg) ;
 }
+
 .hover-blue{
-    transition: 0.2s ease-in;
+    transition: 0.2s ease-in !important;
 }
 .hover-blue:hover{
-    color:var(--color-risdBlue);
+    color:var(--color-risdBlue) !important;
 }
 
 .transparent-bg{
@@ -118,14 +133,11 @@ body{
 .white-bottom-border{
     border-bottom: solid 1px white;
 }
-/* main */
-main{
-    width: 100%;
-    margin-top: var(--height-header-container);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.white-dot-border{
+    border: dashed 1px white;
 }
+
+
 
 /* title*/ 
 .title-container{
@@ -163,6 +175,10 @@ main{
     z-index: 16;
 }
 
+.inner-title-box a{
+    color: black;
+}
+
 .title{
     margin: 30px 0;
 }
@@ -184,14 +200,36 @@ main{
 	border: solid 1px black;
     font-size: var(--font-size-body-base);
     padding: 10px 30px;
+
+}
+
+.bar{
     transition: 0.5s ease-in;
 }
 
-.exploreWorkBtn a:hover{
+.bar:hover{
     border: solid 1px var(--color-risdBlue);
     box-shadow: inset 900px 0 100px 0 var(--color-header-bg);
     cursor: pointer;
     color: var(--color-risdBlue);
+}
+
+.bar-blue{
+    transition: 0.5s ease-in;
+}
+
+.bar-blue:hover{
+    box-shadow: inset 900px 0 100px 0 var(--color-risdBlue);
+    cursor: pointer;
+}
+
+.bar-dark{
+    transition: 0.5s ease-in;
+}
+
+.bar-dark:hover{
+    box-shadow: inset 900px 0 100px 0 black;
+    cursor: pointer;
 }
 
 /* works */
@@ -201,6 +239,7 @@ main{
     min-width: 1100px;
     margin: 10px auto;
     margin-top: -150px;
+    margin-bottom: 90px;
     padding-top: var(--height-header-container);
     padding-left: 60px;
     padding-right:60px;
@@ -217,10 +256,45 @@ main{
 .single-work{
     display: inline-block;
     width: 300px;
-    height:400px;
+    min-height: 350px;
     background-color: white;
-    padding: 0 5px;
+    padding: 5px;
 }
+
+.single-work-place-holder{
+    display: inline-block;
+    width: 300px;
+    min-height: 350px;
+    background-color: none;
+    padding: 0 5px;
+    border: dashed 1px white;
+    opacity: 0.5;
+}
+
+.single-work-place-holder p{
+    color: white;
+    padding-top: 50%;
+    text-align: center;
+}
+
+.more-work{
+    display: inline-block;
+    width: 300px;
+    min-height: 350px;
+    background-color: none;
+    padding: 0 5px;
+    border: solid 1px white;
+}
+
+.more-work p{
+    color: white;
+    position: relative;
+    width:100%;
+    top: 50%;
+    transform: translate(0,-50%);
+    text-align: center;
+}
+
 /* content images */
 .img-box{
     display: block;
@@ -272,7 +346,7 @@ main{
 
 .work-intro{
     font-size: var(--font-size-body-small);
-    margin: 5px 0;
+    margin:10px 0 30px 0;
 }
 
 /* content */
@@ -283,23 +357,24 @@ main{
 /* footer */
 footer{
     bottom: 0;
+    height: 100px;
 }
 
 
 /* animation */
-.toBlue{
+.toOrange{
     animation-duration: 1s;
-    animation-name: toBlue;
+    animation-name: toOrange;
     animation-fill-mode: forwards;
 }
 
-@keyframes toBlue{
+@keyframes toOrange{
     0%{
         
     }
 
     100%{
-        color: var(--color-risdBlue)
+        color: var(--color-header-bg)
     }
 }
 
