@@ -369,7 +369,7 @@ main a{
     top: -150px;
     width: 60%;
     min-width: 850px;
-    height: 2400px;
+    height: 2500px;
     z-index: 3;
 }
 
@@ -516,6 +516,7 @@ footer{
     height: 70px;
     text-align: center;
     padding-top: 20px;
+    z-index: 30;
 }
 
 footer a{
