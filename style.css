@@ -301,6 +301,15 @@ main a{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items:center;
+    margin: 5px 0;
+    padding: 0;
+    z-index: 5;
+}
+
+.work-info-container-hover-anim{
+    background-color: none;
+    width: 100%;
     margin: 5px 0;
     padding: 0;
     z-index: 5;
@@ -308,8 +317,17 @@ main a{
 
 .work-info-card{
     font-size: var(--font-size-title-base);
-    min-width: 120px;
-    margin: 0 15px;
+    min-width: 60px;
+    max-width: 50%;
+    margin: 0 5px;
+    z-index: 5;
+}
+
+.work-info-card-anim{
+    display: inline-block;
+    font-size: var(--font-size-title-base);
+    width:240px;
+    margin: 0 5px;
     z-index: 5;
 }
 
@@ -320,13 +338,26 @@ main a{
     font-size: var(--font-size-body-large);
 }
 
-.info-content-box img{
+.info-content-box-img{
     max-width: 210px;
     width: 90%;
     margin: 5px 0;
+    
+}
+
+.info-content-box-img-large{
+    max-width: 2100px;
+    width: 90%;
+    margin: 5px 0;
+    transition: 0.5s ease-in;
+}
+
+.info-content-box-img-large:hover{
+    transform: scale(2);
 }
 
 .work-info-card p{
+    display: block;
     font-family: var(--font-body);
     font-size: 0.5em;
     color: grey;
@@ -376,6 +407,35 @@ main a{
     z-index: 3;
 }
 
+/* User Story */
+#tomStory{
+    display: none;
+    position: fixed;
+    width: 20vw;
+    top: 45%;
+    left: 15vw;
+    transform: translate(0,-50%);
+    z-index: 200;
+    text-align: left;
+    background-color: white;
+    padding: 5px;
+    border: var(--color-header-bg) 1px solid;
+}
+
+#laurenStory{
+    display: none;
+    position: fixed;
+    width: 20vw;
+    top: 70%;
+    right: 1vw;
+    transform: translate(-50%,-50%);
+    z-index: 90;
+    text-align: left;
+    background-color: white;
+    padding: 5px;
+    border: var(--color-header-bg) 1px solid;
+}
+
 /* color palette */
 .color-bg-1D70B7{
     display: block;
@@ -409,6 +469,13 @@ main a{
     background-color: #16C4B9;
 }
 /* end single work webpage */
+
+.img-caption{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 66%;
+}
 
 .single-work{
     display: inline-block;

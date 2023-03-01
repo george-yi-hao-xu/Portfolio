@@ -54,7 +54,21 @@ $(()=>{
         console.log("no typed");
     };
     
+    // jQuery 
+    // hover user-story
+    const userStoryImg1 = $("#userStoryImg1");
+    const userStoryImg2 = $("#userStoryImg2");
+    const tomStory = $("#tomStory");
+    const laurenStory = $("#laurenStory");
+    // hover A to show B
+    HoverToggle(userStoryImg1, tomStory);
+    HoverToggle(userStoryImg2, laurenStory);
 
+    const appImg1 = $("#appImg1");
+    const appImg2 = $("#appImg2");
+    // hover hide another
+    HoverHide(appImg1,appImg2);
+    HoverHide(appImg2,appImg1);
 
 })
 
@@ -66,4 +80,28 @@ function MidBarResize(){
     const mainElem = $("main");
     // $(singleWorkMiddle).css("height", ($(workContainer).height() + $(titleContainer).height()) + "px");
     $(singleWorkMiddle).css("height", $(mainElem).height() + "px");
+}
+
+/* input: jQueryElement, a jQueryElement
+ *        div, another jQueryElement to be toggled
+ * output: void
+ */
+function HoverToggle(jQueryElement, div){
+    $(jQueryElement).hover(() => {
+        $(div).css("display","block")
+    },()=>{
+        $(div).css("display","none")
+    });
+}
+
+/* input: jQueryElementHovered, a jQueryElement to be hovered
+ *        jQueryElementToHide, another jQueryElement to be hidden when the user hovers jQueryElementHovered
+ * output: void
+ */
+function HoverHide(jQueryElementHovered,jQueryElementToHide){
+    $(jQueryElementHovered).hover(() => {
+        $(jQueryElementToHide).stop(true).css("display","none")
+    },()=>{
+        $(jQueryElementToHide).stop(true).css("display","block")
+    });
 }
