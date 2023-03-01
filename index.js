@@ -29,30 +29,26 @@ $(()=>{
         MidBarResize();
     })
 
-    $.event.add(window,"resize", MidBarResize)
+    $.event.add(window,"resize", MidBarResize);
 
-
-    // typed.js
-    var options = {
-        strings: ["<h1>Welcome!</h1>", "<h1 id='typed-strings'><span> I'm </span><abbr title='George Yihao Xu'>George</abbr></h1>"],
-        typeSpeed: 90,
-        backSpeed: 10,
-        backDelay: 2000,
-        loop: true,
-        showCursor: false,
-        onBegin: () => {
-            $('#typed').removeClass("toOrange");
-        },
-        onComplete: () => {
-            $('#typed').addClass("toOrange");
-        },
-      };
-    
+    // adding typing effects to #typed in index.html
     try{
-        var typed = new Typed('#typed', options)
+        TypingEffect("#typed",["<h1>Welcome!</h1>", "<h1 id='typed-strings'><span> I'm </span><abbr title='George Yihao Xu'>George</abbr></h1>"]);
     }catch{
-        console.log("no typed");
-    };
+        console.log("no element called typed")
+    }
+    // adding typing effects to #typedOSB in osb.html
+    try{
+        TypingEffect("#typedOSB",["<h1><abbr class='risd-yellow'>O</abbr>cean <abbr class='risd-yellow'>S</abbr>tate <abbr class='risd-yellow'>B</abbr>ioactives </h1>", "<h1>OSB</h1>"]);
+    }catch{
+        console.log("no element called typedOSB")
+    }
+    // adding typing effects to #typedEcoHome in ecoHome.html
+    try{
+        TypingEffect("#typedEcoHome", ["<h1><abbr class='risd-yellow'>E</abbr>co <abbr class='risd-yellow'>H</abbr>ome</h1>", "<h1>RISD Academic Work</h1>"])
+    }catch{
+        console.log("no element called typedEcoHome")
+    }
     
     // jQuery 
     // hover user-story
@@ -70,6 +66,12 @@ $(()=>{
     HoverHide(appImg1,appImg2);
     HoverHide(appImg2,appImg1);
 
+    // hover hide in osb.html
+    const osbWFimg1 = $("#osbWFimg1");
+    const osbWFimg2 = $("#osbWFimg2");
+    HoverHide(osbWFimg1,osbWFimg2);
+    HoverHide(osbWFimg2,osbWFimg1);
+
 })
 
 function MidBarResize(){
@@ -79,7 +81,7 @@ function MidBarResize(){
     // const titleContainer = $("#titleContainer")
     const mainElem = $("main");
     // $(singleWorkMiddle).css("height", ($(workContainer).height() + $(titleContainer).height()) + "px");
-    $(singleWorkMiddle).css("height", $(mainElem).height() + "px");
+    $(singleWorkMiddle).css("height", ($(mainElem).height() + 50) + "px");
 }
 
 /* input: jQueryElement, a jQueryElement
@@ -104,4 +106,31 @@ function HoverHide(jQueryElementHovered,jQueryElementToHide){
     },()=>{
         $(jQueryElementToHide).stop(true).css("display","block")
     });
+}
+/* input: idStr, a string to tell which element to have effect
+ *        contentStrList, a list of string(s)
+ * output: void
+ */
+function TypingEffect(idStr,contentStrList){
+        // typed.js
+        const options = {
+            strings: contentStrList,
+            typeSpeed: 90,
+            backSpeed: 10,
+            backDelay: 2000,
+            loop: true,
+            showCursor: false,
+            onBegin: () => {
+                $(idStr).removeClass("toOrange");
+            },
+            onComplete: () => {
+                $(idStr).addClass("toOrange");
+            },
+          }
+        // #typed in home page
+        try{
+            const typed = new Typed(idStr, options)
+        }catch{
+            console.log("no such element called " + idStr);
+        }
 }

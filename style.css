@@ -301,7 +301,7 @@ main a{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items:center;
+    align-items: flex-start;
     margin: 5px 0;
     padding: 0;
     z-index: 5;
