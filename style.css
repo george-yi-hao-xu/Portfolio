@@ -366,10 +366,13 @@ main a{
 .singe-work-middle{ /*middle white background*/
     position: absolute;
     background-color: white;
-    top: -150px;
+    margin: 10px auto;
+    margin-top: -150px;
+    margin-bottom: 150px;
+    padding-top: var(--height-header-container);
+    top: 0;
     width: 60%;
     min-width: 850px;
-    height: 2500px;
     z-index: 3;
 }
 

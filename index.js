@@ -24,8 +24,13 @@ $(()=>{
         const targetLogoTopVal = logoStartTopVal - scrollYVal * 5;
         $(logoElement).css('top', targetLogoTopVal + "px");
 
-        $(titleContainerElem).css('top', (titleContainerStartTopVal-scrollYVal * 1.75) + "px")
+        $(titleContainerElem).css('top', (titleContainerStartTopVal-scrollYVal * 1.75) + "px");
+
+        MidBarResize();
     })
+
+    $.event.add(window,"resize", MidBarResize)
+
 
     // typed.js
     var options = {
@@ -42,6 +47,23 @@ $(()=>{
             $('#typed').addClass("toOrange");
         },
       };
-    var typed = new Typed('#typed', options);
+    
+    try{
+        var typed = new Typed('#typed', options)
+    }catch{
+        console.log("no typed");
+    };
+    
+
+
 })
 
+function MidBarResize(){
+    // middle white background following the contaienr height
+    const singleWorkMiddle = $("#singleWorkMiddle");
+    // const workContainer = $("#workContainer");
+    // const titleContainer = $("#titleContainer")
+    const mainElem = $("main");
+    // $(singleWorkMiddle).css("height", ($(workContainer).height() + $(titleContainer).height()) + "px");
+    $(singleWorkMiddle).css("height", $(mainElem).height() + "px");
+}
