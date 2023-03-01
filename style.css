@@ -8,15 +8,19 @@
     --font-size-body-base: 15px;
     --font-size-body-large: 17px;
 
+    --font-size-title-small:20px;
     --font-size-title-base: 30px;
     --font-size-title-large: 60px;
 
     /* div height */
     --height-header-container: 45px;
+    --color-block-width: 60px;
 
     /* color */
     --color-header-bg: #FF7900;
     --color-risdBlue:	#2454FF;
+    --color-blue-grey:#7595AC;
+    --color-blue-dark:#42827A;
 }
 
 *{
@@ -46,6 +50,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 0;
 }
 
 main a{
@@ -149,6 +154,10 @@ main a{
     z-index: 15;
 }
 
+.center-text{
+    text-align: center;
+}
+
 /* typed.js */
 .title-contents{
     display: block;
@@ -185,6 +194,11 @@ main a{
 
 .title h1{
     font-size: var(--font-size-title-large)
+}
+
+.title h3{
+    font-size: var(--font-size-title-small);
+    margin: 5px 0;
 }
 
 .title span{
@@ -234,7 +248,7 @@ main a{
 
 /* division hr line */
 .hr-container{
-    height: 60px;
+    margin: 10px 0;
     text-align: center;
     display: flex;
     align-items: center;
@@ -245,6 +259,12 @@ main a{
     width: 60px;
     height:1px;
     background-color: white;
+}
+.hr-line-single-work{
+    display: inline-block;
+    width: 60px;
+    height:1px;
+    background-color: var(--color-header-bg);
 }
 .hr-text{
     color: white;
@@ -270,11 +290,126 @@ main a{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 10px auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
+
+/* in the single work webpage */
+.work-info-container{
+    background-color: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px 0;
+    padding: 0;
+    z-index: 5;
+}
+
+.work-info-card{
+    font-size: var(--font-size-title-base);
+    min-width: 120px;
+    margin: 0 15px;
+    z-index: 5;
+}
+
+.work-info-card span{
+    color: var(--color-header-bg);
+    font-family: var(--font-title);
+    margin: 0;
+    font-size: var(--font-size-body-large);
+}
+
+.info-content-box img{
+    max-width: 210px;
+    width: 90%;
+    margin: 5px 0;
+}
+
+.work-info-card p{
+    font-family: var(--font-body);
+    font-size: 0.5em;
+    color: grey;
+    margin: 0;
+    padding: auto 0;
+}
+
+.wireframe-img{
+    height: 100px;
+}
+
+.info-content-box{
+    background-color: none;
+    width: 66%;
+    margin:10px 0;
+    padding: 10px;
+    text-align: center;
+    z-index: 5;
+}
+
+.info-content-box span{
+    font-family: var(--font-title);
+    font-size: var(--font-size-title-small);
+    /* Who are the Users? */
+    color: var(--color-header-bg);
+    margin: 10px 0;
+}
+
+.info-content-box p{
+    font-family: var(--font-body);
+    font-size: var(--font-size-body-base);
+    color: grey;
+    margin-bottom: 10px;
+    padding: 0 5px;
+}
+
+.singe-work-middle{ /*middle white background*/
+    position: absolute;
+    background-color: white;
+    top: -150px;
+    width: 60%;
+    min-width: 850px;
+    height: 2400px;
+    z-index: 3;
+}
+
+/* color palette */
+.color-bg-1D70B7{
+    display: block;
+    margin: 5px auto;
+    width: var(--color-block-width);
+    height: var(--color-block-width);
+    background-color: #1D70B7;
+}
+
+.color-bg-1748CF{
+    display: block;
+    margin: 5px auto;
+    width: var(--color-block-width);
+    height: var(--color-block-width);
+    background-color: #1748CF;
+}
+
+.color-bg-17A9CF{
+    display: block;
+    margin: 5px auto;
+    width: var(--color-block-width);
+    height: var(--color-block-width);
+    background-color: #17A9CF;
+}
+
+.color-bg-16C4B9{
+    display: block;
+    margin: 5px auto;
+    width: var(--color-block-width);
+    height: var(--color-block-width);
+    background-color: #16C4B9;
+}
+/* end single work webpage */
 
 .single-work{
     display: inline-block;
+    margin: 10px 0;
     width: 300px;
     min-height: 350px;
     background-color: white;
