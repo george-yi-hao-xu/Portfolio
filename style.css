@@ -31,6 +31,7 @@
 
     scroll-behavior: smooth;
     box-sizing:border-box;
+
 }
 
 body{
@@ -51,6 +52,7 @@ main{
     flex-direction: column;
     justify-content: center;
     z-index: 0;
+
 }
 
 main a{
@@ -289,7 +291,7 @@ main a{
 .work-container-row{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 10px;
     margin-bottom: 30px;
 }
@@ -327,6 +329,7 @@ main a{
     display: inline-block;
     font-size: var(--font-size-title-base);
     width:240px;
+    height:300px;
     margin: 0 5px;
     z-index: 5;
 }
@@ -407,6 +410,7 @@ main a{
     z-index: 3;
 }
 
+
 /* User Story */
 #tomStory{
     display: none;
@@ -479,7 +483,7 @@ main a{
 
 .single-work{
     display: inline-block;
-    margin: 10px 0;
+    margin: 0 10px;
     width: 300px;
     min-height: 350px;
     background-color: white;
@@ -488,10 +492,11 @@ main a{
 
 .single-work-place-holder{
     display: inline-block;
+    margin: 0 10px;
     width: 300px;
     min-height: 350px;
     background-color: none;
-    padding: 0 5px;
+    padding: 5px;
     border: dashed 1px white;
     opacity: 0.5;
 }
@@ -505,6 +510,7 @@ main a{
 .more-work{
     display: inline-block;
     width: 300px;
+    margin: 0 10px;
     min-height: 350px;
     background-color: none;
     padding: 0 5px;
@@ -628,5 +634,26 @@ footer a{
 
     100%{
         color: var(--color-header-bg);
+    }
+}
+
+.gradient-appear-fast{
+    animation-duration: 0.5s;
+    animation-name: appear;
+}
+.gradient-appear{
+    animation-duration: 1s;
+    animation-name: appear;
+}
+.gradient-appear-slow{
+    animation-duration: 2s;
+    animation-name: appear;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
     }
 }
