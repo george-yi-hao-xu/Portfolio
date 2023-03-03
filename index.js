@@ -73,6 +73,10 @@ $(()=>{
     const osbWFimg2 = $("#osbWFimg2");
     HoverHide(osbWFimg1,osbWFimg2);
     HoverHide(osbWFimg2,osbWFimg1);
+    const osbHiFiImg1 = $("#osbHiFiImg1");
+    const osbHiFiImg2 = $("#osbHiFiImg2");
+    HoverHide(osbHiFiImg1,osbHiFiImg2);
+    HoverHide(osbHiFiImg2,osbHiFiImg1);
 
     // loading GD div
     const gdWorkContainerElem = $("#gdWorkContainer");
@@ -83,7 +87,7 @@ $(()=>{
         // }else{
         //     newJSXgd += `<img class='archWorkImg' src='images/archi/ar_Page_${i}.jpg' alt='archi${i}.jpg'>`;
         // }
-        newJSXgd += `<img class='archWorkImg' src='images/moregd/${i}.png' alt='moregd${i}.png'>`;
+        newJSXgd += `<img class='archWorkImg' src='images/moregd/${i}.jpg' alt='moregd${i}.jpg'>`;
     }
     $(gdWorkContainerElem).html(newJSXgd);
     linkImgDiv("#moreGDWorkBtn","#gdWorkContainer");
