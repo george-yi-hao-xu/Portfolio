@@ -210,6 +210,7 @@ main a{
 /* exploreWorkBtn */
 .exploreWorkBtn{
     padding-top: 60px;
+    z-index: 100;
 }
 
 .exploreWorkBtn a{
@@ -294,27 +295,47 @@ main a{
     justify-content: center;
     margin-top: 10px;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 /* in the single work webpage */
 .work-info-container{
     background-color: none;
-    width: 100%;
+    width: 50%;
+
+    margin: 0;
+    padding: 15px;
+
+    z-index: 5;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
-    margin: 5px 0;
-    padding: 0;
+}
+
+.work-info-container-wide{
+    background-color: none;
+    width: 66%;
+
+    margin: 0;
+    padding: 30px;
+
     z-index: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .work-info-container-hover-anim{
     background-color: none;
-    width: 100%;
-    margin: 5px 0;
-    padding: 0;
+    width: 50%;
+
+    margin: 0;
+    padding: 15px;
+
     z-index: 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .work-info-card{
@@ -411,7 +432,7 @@ main a{
 .info-content-box-img-large:hover{
     transform: scale(2);
 }
-
+/* lines of description <p>*/
 .work-info-card p{
     display: block;
     font-family: var(--font-body);
@@ -419,6 +440,11 @@ main a{
     color: grey;
     margin: 0;
     padding: auto 0;
+}
+
+.description-line::before{
+    content: " .";
+    display: inline-block;
 }
 
 .wireframe-img{
@@ -430,9 +456,10 @@ main a{
     flex-direction: row;
     background-color: none;
     justify-content: space-between;
+    align-items: center;
     width: 66%;
     margin:10px 0;
-    padding: 10px;
+    padding: 10px 20px;
     text-align: left;
     z-index: 5;
 }
@@ -445,13 +472,42 @@ main a{
     margin: 10px 0;
 }
 
+.row-title{
+    color: var(--color-header-bg);
+    font-family: var(--font-title);
+    font-size: var(--font-size-body-large);
+    left: 0;
+    margin: 5px 0;
+    padding: 0 5px;;
+    z-index: 50;
+    max-width: 70%;
+}
+
 .info-content-box p{
     font-family: var(--font-body);
     font-size: var(--font-size-body-base);
     color: grey;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     padding: 0 5px;
-    max-width: 70%;
+    max-width: 100%;
+}
+
+.content-discription{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.content-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+    padding-left: 10%;
 }
 
 .singe-work-middle{ /*middle white background*/
@@ -536,6 +592,7 @@ main a{
     margin: 0 auto;
     text-align: center;
     width: 66%;
+    bottom: 0;
 }
 
 .single-work{
