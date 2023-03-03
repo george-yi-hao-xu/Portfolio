@@ -394,6 +394,7 @@ main a{
 }
 
 .info-content-box-img{
+    text-align: left;
     max-width: 210px;
     width: 90%;
     margin: 5px 0;
@@ -425,11 +426,14 @@ main a{
 }
 
 .info-content-box{
+    display: flex;
+    flex-direction: row;
     background-color: none;
+    justify-content: space-between;
     width: 66%;
     margin:10px 0;
     padding: 10px;
-    text-align: center;
+    text-align: left;
     z-index: 5;
 }
 
@@ -447,6 +451,7 @@ main a{
     color: grey;
     margin-bottom: 10px;
     padding: 0 5px;
+    max-width: 70%;
 }
 
 .singe-work-middle{ /*middle white background*/
