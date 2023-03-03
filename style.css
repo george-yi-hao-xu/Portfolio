@@ -341,6 +341,58 @@ main a{
     font-size: var(--font-size-body-large);
 }
 
+/* video player */
+#fade {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 900;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+  }
+
+.video-container{
+    display: none;
+    position: fixed;
+    top: 15vh;
+    margin: 0 auto;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    overflow:visible;
+}
+
+.videoPlayer{
+    height: 66vh;
+    z-index: 1000;
+}
+
+.box-close{
+    float: right;
+    cursor: pointer;
+    color: white;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    z-index: 1000;
+    
+}
+
+.box-close:before{
+    font-family: 'Roboto', Courier, monospace;
+    font-size: 25px;
+    content: " X ";
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
 .info-content-box-img{
     max-width: 210px;
     width: 90%;
@@ -430,7 +482,7 @@ main a{
     display: none;
     position: fixed;
     width: 20vw;
-    top: 70%;
+    top: 45%;
     right: 1vw;
     transform: translate(-50%,-50%);
     z-index: 90;
@@ -583,6 +635,25 @@ main a{
 /* content */
 .empty-div{
     height:3000px;
+}
+
+/* Architecture Work Container */
+.moreWorkContainer{
+    display: none;
+    position: fixed;
+    width: 66vw;
+    height: 90vh;
+    top:5vh;
+    left:17vw;
+
+    overflow: scroll;
+    z-index: 1000;
+}
+
+.archWorkImg{
+    display: block;
+    width: 100%;
+    object-fit: contain;
 }
 
 /* footer */

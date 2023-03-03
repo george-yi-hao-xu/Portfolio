@@ -1,3 +1,5 @@
+import {linkImgDiv} from "./indexVideoManager.js";
+
 $(()=>{
     const headerElement = $("#headerContainer");
     const headerScrollMagnifier = 0.5;
@@ -71,6 +73,33 @@ $(()=>{
     const osbWFimg2 = $("#osbWFimg2");
     HoverHide(osbWFimg1,osbWFimg2);
     HoverHide(osbWFimg2,osbWFimg1);
+
+    // loading GD div
+    const gdWorkContainerElem = $("#gdWorkContainer");
+    let newJSXgd = "";
+    for(let i = 1; i <= 4; i++){
+        // if(i<=9){
+        //     newJSXgd += `<img class='archWorkImg' src='images/archi/ar_Page_0${i}.jpg' alt='archi${i}.jpg'>`;
+        // }else{
+        //     newJSXgd += `<img class='archWorkImg' src='images/archi/ar_Page_${i}.jpg' alt='archi${i}.jpg'>`;
+        // }
+        newJSXgd += `<img class='archWorkImg' src='images/moregd/${i}.png' alt='moregd${i}.png'>`;
+    }
+    $(gdWorkContainerElem).html(newJSXgd);
+    linkImgDiv("#moreGDWorkBtn","#gdWorkContainer");
+
+    // loading archi div
+    const archWorkContainerElem = $("#archWorkContainer");
+    let newJSX = "";
+    for(let i = 1; i <= 25; i++){
+        if(i<=9){
+            newJSX += `<img class='archWorkImg' src='images/archi/ar_Page_0${i}.jpg' alt='archi${i}.jpg'>`;
+        }else{
+            newJSX += `<img class='archWorkImg' src='images/archi/ar_Page_${i}.jpg' alt='archi${i}.jpg'>`;
+        }
+    }
+    $(archWorkContainerElem).html(newJSX);
+    linkImgDiv("#moreArchiWorkBtn","#archWorkContainer");
 
 })
 

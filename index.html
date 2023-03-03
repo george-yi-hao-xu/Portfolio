@@ -21,7 +21,8 @@
     <!-- typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Scrolling effect JS file HERE-->
-    <script src="index.js" type="text/javascript" defer></script>
+    <script src="index.js" type="module" defer></script>
+    <script src="indexVideoManager.js" type="module" defer></script>
     <!-- Header -->
     <div class="header-container white-bottom-border" id="headerContainer">
         <div class="header">
@@ -67,6 +68,7 @@
                 </div>
             </div>
         </div>
+        <div id="fade"></div>
         <div>
             <div class="work-container " id="workContainer">
                 <div class="hr-container">
@@ -98,12 +100,12 @@
                         <p class="work-intro">An energy-saving app by which the user can monitor the daily usage and get notification when emergency</p>
                     </div>
                     
-                    <!-- Redesign risd app-->
+                    <!-- Welight Education App -->
                     <div class="single-work">
                         <div class="img-box">
-                            <a><img class="img-cover" src="images/risd-logo.jpg" alt="risd-logo.jpg"></a>
+                            <a><img class="img-cover" src="images/Solid_white.svg.webp" alt="risd-logo.jpg"></a>
                         </div>
-                        <h3>Redesign RISD App</h3>
+                        <h3>Welight Education App</h3>
                         <p class="work-data">Spring 2023</p>
                         <p class="work-data">App Design & Development</p>
                         <p class="work-intro">Coming Soon...</p>
@@ -127,6 +129,27 @@
                         <p class="work-data">Web Game Development</p>
                         <p class="work-intro">A basic web game called Nim. It allows two players to fight against each other. </p>
                     </div>
+                    <!-- Connect4-->
+                    <div class="single-work">
+                        <div class="img-box">
+                            <!-- Connect4 -->
+                            <a href="#" id="connect4ImgAnchor"><img class="img-cover" src="images/webGame/connect4-01.PNG" alt="connect4"></a>
+                        </div>
+                        <h3>Connect4</h3>
+                        <p class="work-data">Fall 2022 | BrownU</p>
+                        <p class="work-data">Console Game Development w/ AI</p>
+                        <p class="work-intro">Let's Play ! </p>
+                    </div>
+                    <div class="video-container gradient-appear" id="connect4VideoBox">
+                        <!-- Video container-->
+                        
+                        <a class="box-close" id="boxCloseBtn"></a>
+                        <video class="videoPlayer" id="connect4Video" src="videos/Connect4-Human-vs-Human.mkv" controls>
+                            <source src="videos/Connect4-Human-vs-Human.mkv" type="video/mp4">
+                            
+                        </video>
+                    </div>
+                    <!-- end of Connect4 -->
                     <!-- Chase-->
                     <div class="single-work">
                         <div class="img-box">
@@ -137,17 +160,7 @@
                         <p class="work-data">Web Game Development</p>
                         <p class="work-intro">Eat as many blocks as possible. </p>
                     </div>
-                    <!-- Connect4-->
-                    <div class="single-work">
-                        <div class="img-box">
-                            <!-- Connect4 -->
-                            <a href="https://youtu.be/Q2q96ESaSaU" target="_blank"><img class="img-cover" src="images/webGame/connect4-01.PNG" alt="connect4"></a>
-                        </div>
-                        <h3>Connect4</h3>
-                        <p class="work-data">Fall 2022 | BrownU</p>
-                        <p class="work-data">Console Game Development w/ AI</p>
-                        <p class="work-intro">Let's Play ! </p>
-                    </div>
+                    <!-- end of chase -->
                 </div>
                 
 
@@ -161,13 +174,26 @@
                     <!--Shé:kon-->
                     <div class="single-work">
                         <div class="img-box">
-                            <a href="https://youtu.be/iQuNsEEnoFI" target="_blank"><img class="img-cover" src="images/shekon.PNG" alt="shekon"></a>
+                            <!-- <a href="https://youtu.be/iQuNsEEnoFI" target="_blank"><img class="img-cover" src="images/shekon.PNG" alt="shekon"></a> -->
+                            <a href="#" id="shekonImgAnchor"><img class="img-cover" src="images/shekon-2.jpg" alt="shekon-2.jpg"></a>
                         </div>
                         <h3>Shé:kon</h3>
                         <p class="work-data">Spring 2023</p>
                         <p class="work-data">VR Development</p>
                         <p class="work-intro">Experience the charm of the indigenous language in virtual RISD Museum </p>
                     </div>
+                    <div class="video-container gradient-appear" id="shekonVideoBox">
+                        <!-- Video container-->
+                        
+                        <a class="box-close" id="boxCloseBtn"></a>
+                        <video class="videoPlayer" id="shekonVideo" src="videos/shekon.mp4" controls>
+                            <source src="videos/shekon.mp4" type="video/mp4">
+                            
+                        </video>
+                    </div>
+            
+                    <!-- end Shekon -->
+
                     <!-- NASA-->
                     <div class="single-work">
                         <div class="img-box">
@@ -178,16 +204,27 @@
                         <p class="work-data">AR Development</p>
                         <p class="work-intro">Coming Soon...</p>
                     </div>
+
                     <!-- Aug Shooting Range-->
                     <div class="single-work">
                         <div class="img-box">
-                            <a href="https://youtube.com/shorts/oXG8qh6X67I?feature=share" target="_blank"><img class="img-cover" src="images/aug.png" alt="aug shooting range"></a>
+                            <a href="#" id="augImgAnchor"><img class="img-cover" src="images/aug.png" alt="aug shooting range"></a>
                         </div>
                         <h3>Shooting Range</h3>
                         <p class="work-data">Spring 2023</p>
                         <p class="work-data">VR Development</p>
                         <p class="work-intro">Lock & Load </p>
                     </div>
+                    <div class="video-container gradient-appear" id="augVideoBox">
+                        <!-- Video container-->
+                        
+                        <a class="box-close" id="boxCloseBtn"></a>
+                        <video class="videoPlayer" id="augVideo" src="videos/aug.mp4" controls>
+                            <source src="videos/aug.mp4" type="video/mp4">
+                            
+                        </video>
+                    </div>
+                    <!-- END: Aug Shooting Range-->
                 </div>
                 <div class="work-container-row">
                     <!-- Cross the Pell -->
@@ -245,9 +282,13 @@
                         <p class="work-intro">Every new school year begins with many international students coming to RISD. The office will create beautiful banners to welcome these students and congratulate them on coming</p>
                     </div>
                     <!-- work: More gd work-->
-                    <a href="moreGD.html" target="_blank" class="more-work bar-dark hover-blue">
+                    <a href="#" class="more-work bar-dark hover-blue" id="moreGDWorkBtn">
                         <p class="hover-blue">More Graphic Design Work</p>
                     </a>
+                    <div class="moreWorkContainer" id="gdWorkContainer">
+                        <a class="box-close" id="boxCloseBtn"></a>
+                        <!-- <img class="archWorkImg" src="images/archi/ar_Page_01.jpg" alt=""> -->
+                    </div>
                 </div>
 
                 <!-- Architecture Project -->
@@ -278,10 +319,15 @@
                         <p class="work-data">Parametric Design</p>
                         <p class="work-intro">Structural Design with the help of recursion algorithm</p>
                     </div>
-                    <!-- interiors -->
-                    <a href="Files/portfolio_20211021_intern_work_interior architecture.pdf" target="_blank" class="more-work bar-dark hover-blue">
+                    <!-- more work -->
+                    <a class="more-work bar-dark hover-blue" id="moreArchiWorkBtn">
                         <p class="hover-blue">More Works on Architecture</p>
                     </a>
+                    <div class="moreWorkContainer" id="archWorkContainer">
+                        <a class="box-close" id="boxCloseBtn"></a>
+                        <!-- <img class="archWorkImg" src="images/archi/ar_Page_01.jpg" alt=""> -->
+                    </div>
+                    <!-- end of more work -->
                     
             </div>
         </div>
