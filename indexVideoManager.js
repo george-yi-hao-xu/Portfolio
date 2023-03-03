@@ -32,14 +32,16 @@ function linkImgVideo (img,videoBox,video) {
         $("#fade").click( e => {
             e.preventDefault();
             $(videoBox).hide();
-            $(video).trigger('pause');
+            // $(video).trigger('pause');
+            $(video).attr('src', $(video).attr('src'));
             $("#fade").hide();
         })
     });
     $(".box-close").click( e =>{
         e.preventDefault();
         $(videoBox).hide();
-        $(video).trigger('pause');
+        // $(video).trigger('pause');
+        $(video).attr('src', $(video).attr('src'));
         $("#fade").hide();
     })
 }
