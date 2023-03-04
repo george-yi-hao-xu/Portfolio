@@ -22,6 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Scrolling effect JS file HERE-->
     <script src="../index.js" type="module" defer></script>
+    <script src="./ecohome2Bahavior.js" type="module" defer></script>
     <!-- Header -->
     <div class="header-container white-bottom-border" id="headerContainer">
         <div class="header">
@@ -39,6 +40,7 @@
         </div>
     </div>
     <main class="">
+        <div id="fade"></div>
         <div class="title-container white-bg" id="titleContainer">
             <div class="title-contents center-text">
                 <!-- <div class="type-container">
@@ -266,7 +268,7 @@
                 </div>
                 <div class="work-info-card-base">
                     <div class="single-img-container">
-                        <img class="img-base" src="../images/ecohome/page3.PNG" alt="page3.PNG">
+                        <img class="img-base" id="ecohomeHiFiImg3" src="../images/ecohome/page3.PNG" alt="page3.PNG">
                     </div>
                 </div>
             </div>
@@ -283,7 +285,11 @@
             </div>
         <!-- end -->
         </div>
-    <!-- end region s-->
+    <!-- end region s z-index 10 -->
+        <div class="moreWorkContainer" id="ecohomeHiFiImg3Container">
+            <a class="box-close" id="boxCloseBtn"></a>
+            <img class="img-enlarged" src="../images/ecohome/page3.PNG" alt="high-fidelity-01 large">
+        </div>
     </main>
     <footer>
         <p>© 2023 Yihao Xu All Rights Reserved</p>
