@@ -859,6 +859,14 @@ footer a{
         margin: 0;
         padding: 0;
     }
+    .info-img-caption{
+        color:var(--color-blue-grey);
+        font-family: var(--font-body);
+        font-size: var(--font-size-body-base);
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
     .info-cards-text::before{
         content: "-- ";
     }
@@ -905,7 +913,7 @@ footer a{
     }
     .single-img-container{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         width: 100%;
     }

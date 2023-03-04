@@ -28,11 +28,11 @@
 
 #barPointer{
     position: absolute;
-    width: 30px;
+    width: 60px;
     height: 2px;
     top: 0;
 
-    background-color: yellow;
+    background-color: rebeccapurple;
     left: 50%;
     transform: translate(-50%,-50%);
 
