@@ -73,10 +73,10 @@ $(()=>{
     const osbWFimg2 = $("#osbWFimg2");
     HoverHide(osbWFimg1,osbWFimg2);
     HoverHide(osbWFimg2,osbWFimg1);
-    const osbHiFiImg1 = $("#osbHiFiImg1");
-    const osbHiFiImg2 = $("#osbHiFiImg2");
-    HoverHide(osbHiFiImg1,osbHiFiImg2);
-    HoverHide(osbHiFiImg2,osbHiFiImg1);
+    // const osbHiFiImg1 = $("#osbHiFiImg1");
+    // const osbHiFiImg2 = $("#osbHiFiImg2");
+    // HoverHide(osbHiFiImg1,osbHiFiImg2);
+    // HoverHide(osbHiFiImg2,osbHiFiImg1);
 
     // loading GD div
     const gdWorkContainerElem = $("#gdWorkContainer");

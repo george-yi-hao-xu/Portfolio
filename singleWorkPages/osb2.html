@@ -22,6 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Scrolling effect JS file HERE-->
     <script src="../index.js" type="module" defer></script>
+    <script src="./osbBahavior.js" type="module" defer></script>
     <!-- Header -->
     <div class="header-container white-bottom-border" id="headerContainer">
         <div class="header">
@@ -39,6 +40,7 @@
         </div>
     </div>
     <main class="">
+        <div id="fade"></div>
         <div class="title-container white-bg  gradient-appear" id="titleContainer">
             <div class="title-contents center-text">
                 <!-- <div class="type-container">
@@ -163,10 +165,15 @@
                     </div>
                     <div class="work-info-card-base">
                         <div class="multi-img-container">
-                            <img class="img-base" id="userStoryImg1" src="../images/osb/wf-01.PNG" alt="wireframing-01">
-                            <img class="img-base" id="userStoryImg2" src="../images/osb/wf-02.PNG" alt="wireframing-02">
+                            <img class="img-base" id="osbWFImg1" src="../images/osb/wf-01.PNG" alt="wireframing-01">
+                            <img class="img-base" id="osbWFImg2" src="../images/osb/wf-02.PNG" alt="wireframing-02">
                         </div>
                     </div>
+                </div>
+                <div class="moreWorkContainer" id="wf1Container">
+                    <a class="box-close" id="boxCloseBtn"></a>
+                    <img class="img-enlarged" src="../images/osb/wf-01.PNG" alt="high-fidelity-01">
+                    <!-- <img class="archWorkImg" src="images/archi/ar_Page_01.jpg" alt=""> -->
                 </div>
             <!-- end -->
             <!-- info: Hi-fi -->
@@ -187,13 +194,18 @@
                             </div>
                         </div> -->
                         <div class="multi-img-container">
-                            <img class="img-base" src="../images/osb/hi-fi-01.PNG" alt="high-fidelity-01">
-                            <img class="img-base" src="../images/osb/wf-03.PNG" alt="high-fidelity-02">
+                            <img class="img-base" id="osbHiFiImg1" src="../images/osb/hi-fi-01.PNG" alt="high-fidelity-01">
+                            <img class="img-base" id="osbHiFiImg2" src="../images/osb/wf-03.PNG" alt="high-fidelity-02">
                         </div>
                     </div>
                 </div>
+                <div class="moreWorkContainer" id="hifi1Container">
+                    <a class="box-close" id="boxCloseBtn"></a>
+                    <img class="img-enlarged" src="../images/osb/hi-fi-01.PNG" alt="high-fidelity-01">
+                    <!-- <img class="archWorkImg" src="images/archi/ar_Page_01.jpg" alt=""> -->
+                </div>
             <!-- end region -->
-                <div class="info-cards-container">
+                <!-- <div class="info-cards-container">
                     <div class="work-info-card-base"></div>
                     <div class="work-info-card-base">  
                         <div class="single-img-container">
@@ -202,18 +214,27 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <div class="single-img-container">
-                        <a href="../index.html#workContainer" class="explore-work-long-btn bar-blue">
-                            E<span class="shrink-text">XPLORE</span> M<span class="shrink-text">ORE</span> W<span class="shrink-text">ORKS</span>
-                        </a>
+                </div> -->
+                <div class="info-cards-container">
+                    <div class="work-info-card-full">
+                        <div class="single-img-container">
+                            <a href="https://designasabaker.github.io/osbwebpage/" class="explore-work-long-btn bar-blue" target="_blank">
+                                C<span class="shrink-text">HECK</span> O<span class="shrink-text">UR</span> H<span class="shrink-text">I-</span>F<span class="shrink-text">I</span> W<span class="shrink-text">ORK</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div><!-- END WORK-CONTAINER-S-->
         </div>
     </main>
     <footer>
+        <div>
+            <div class="single-img-container">
+                <a href="../index.html#workContainer" class="explore-work-long-btn bar-blue">
+                    E<span class="shrink-text">XPLORE</span> M<span class="shrink-text">ORE</span> W<span class="shrink-text">ORKS</span>
+                </a>
+            </div>
+        </div>
         <p>© 2023 Yihao Xu All Rights Reserved</p>
         <p>
             <a href="mailto:yxu13@risd.edu" class="hover-yellow">E-Mail</a> 

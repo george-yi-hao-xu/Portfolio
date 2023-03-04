@@ -700,8 +700,18 @@ become yellow when hover
 /* content */
 .empty-div{
     height:3000px;
-} */
+} 
+.moreWorkContainer{
+    display: none;
+    position: fixed;
+    width: 66vw;
+    height: 90vh;
+    top:5vh;
+    left:17vw;
 
+    overflow: auto;
+    z-index: 1200;
+}
 /* Architecture Work Container */
 /* .moreWorkContainer{
     display: none;
@@ -972,7 +982,12 @@ footer a{
     border: 2px white solid;
     box-shadow: 0 0 200px 100px white;
 }
-
+.img-enlarged{
+    display: block;
+    width: 100%;
+    object-fit: contain;
+    z-index: 2000;
+}
 .user-story-board{
     display: none;
     position: fixed;
@@ -1026,3 +1041,22 @@ footer a{
     border: var(--color-header-bg) 1px solid;
     font-size: var(--font-size-body-large);
 } */
+#fade {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 800;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+  }
+#osbWFImg1:hover{
+    cursor: pointer;
+}
+#osbHiFiImg1:hover{
+    cursor: pointer;
+}

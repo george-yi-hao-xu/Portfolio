@@ -47,6 +47,7 @@ function linkImgVideo (img,videoBox,video) {
 }
 
 export function linkImgDiv (img,div) {  
+    $(div).hide();
     $(img).click( e => { 
         e.preventDefault();
         $(div).show();
