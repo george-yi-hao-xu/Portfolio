@@ -47,7 +47,7 @@ $(()=>{
     }
     // adding typing effects to #typedEcoHome in ecoHome.html
     try{
-        TypingEffect("#typedEcoHome", ["<h1><abbr class='risd-yellow'>E</abbr>co <abbr class='risd-yellow'>H</abbr>ome</h1>", "<h1>RISD Academic Work</h1>"])
+        TypingEffect("#typedEcoHome", ["<h1><abbr class='risd-yellow'>E</abbr><span class='shrink-text grey'>CO</span> <abbr class='risd-yellow'>H</abbr><span class='shrink-text grey'>OME</span></h1>", "<h1>RISD Academic Work</h1>"])
     }catch{
         console.log("no element called typedEcoHome")
     }
