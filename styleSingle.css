@@ -974,10 +974,10 @@ footer a{
     display: none;
     position: fixed;
     width: 30vw;
-    top: 50vh;
+    bottom: 0;
     left: 30vw;
     transform: translate(-50%,-50%);
-    z-index: 200;
+    z-index: 2000;
     text-align: left;
     background-color: white;
     padding: 20px;
