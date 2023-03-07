@@ -16,8 +16,9 @@
     --height-header-container: 45px;
     --color-block-width: 60px;
 
-    /* color */
-    --color-header-bg: #FF7900;
+    /* color orange*/
+    --color-header-bg: black;
+    /**/
     --color-risdBlue:	#2454FF;
     --color-blue-grey:#7595AC;
     --color-blue-dark:#42827A;
@@ -73,7 +74,8 @@ main a{
     height: var(--height-header-container);
 
     font-family: var(--font-title);
-    background-color: var(--color-header-bg);
+
+    background-color: white;
 }
 
 .shrink-text{
@@ -101,9 +103,9 @@ main a{
     display: inline-block;
     margin-right: 5px;
 }
-
+/*work home about resume*/
 .navbar a{
-    color: white;
+    color: black;
 }
 
 /* risd blue color*/

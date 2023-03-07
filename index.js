@@ -36,7 +36,7 @@ $(()=>{
 
     // adding typing effects to #typed in index.html
     try{
-        TypingEffect("#typed",["<h1>Welcome!</h1>", "<h1 id='typed-strings'><span> I'm </span><abbr title='George Yihao Xu'>George</abbr></h1>"]);
+        TypingEffect("#typed",["<h1>Welcome!</h1>", "<h1 id='typed-strings'><span> I'm </span><abbr title='George Yihao Xu'>George Yihao Xu</abbr></h1>"]);
     }catch{
         console.log("no element called typed")
     }

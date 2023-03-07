@@ -17,9 +17,10 @@
     --color-block-width: 60px;
 
     /* color */
-    --color-header-bg: #FF7900;
+    /* previous orange */
+    --color-header-bg: black;
     --color-risdBlue:	#2454FF;
-    --color-blue-grey:#7595AC;
+    --color-blue-grey:black;
     --color-blue-dark:#42827A;
 }
 
@@ -74,7 +75,8 @@ main a{
     height: var(--height-header-container);
 
     font-family: var(--font-title);
-    background-color: var(--color-header-bg);
+    /* background-color: var(--color-header-bg); */
+    background-color: white;
 }
 
 
@@ -102,7 +104,7 @@ main a{
 }
 
 .navbar a{
-    color: white;
+    color: black;
 }
 
 risd blue color
