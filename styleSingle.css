@@ -857,7 +857,7 @@ footer a{
     .info-img-caption{
         color:var(--color-blue-grey);
         font-family: var(--font-body);
-        font-size: var(--font-size-body-base);
+        font-size: var(--font-size-body-small);
         margin: 0;
         padding: 0;
         text-align: center;
@@ -1032,13 +1032,13 @@ footer a{
     filter: alpha(opacity=80);
   }
   
-#osbWFImg1:hover{
+#osbWFImgM:hover{
     cursor: pointer;
 }
 #osbHiFiImg1:hover{
     cursor: pointer;
 }
-#ecohomeHiFiImg3:hover{
+#ecohomeHiFiImg1:hover{
     cursor: pointer;
 }
 
