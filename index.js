@@ -108,6 +108,14 @@ $(()=>{
 
     // loading animation
     window.addEventListener("scroll", reveal);
+
+    // hover welight to show coming soon
+    $("#welight").hover(
+        ()=>{$("#welightComingSoon").show()},() =>{$("#welightComingSoon").hide()});
+    
+    $("#thesis").hover(
+        ()=>{$("#thesisComingSoon").show()},() =>{$("#thesisComingSoon").hide()});
+    
 })
 
 function MidBarResize(){
