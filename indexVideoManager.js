@@ -20,6 +20,7 @@ $(() => {
     linkImgVideo("#shekonImgAnchor","#shekonVideoBox","#shekonVideo");
     linkImgVideo("#connect4ImgAnchor","#connect4VideoBox","#connect4Video");
     linkImgVideo("#augImgAnchor","#augVideoBox","#augVideo");
+    linkImgVideo("#nasaImgAnchor","#nasaVideoBox","#nasaVideo");
 })
 
 //function: click img to show the video

@@ -403,9 +403,8 @@ main a{
     z-index: 1000;
     margin: 0;
     padding: 0;
-    overflow:visible;
+    overflow: visible;
 }
-
 .videoPlayer{
     height: 66vh;
     z-index: 1000;

@@ -116,6 +116,9 @@ $(()=>{
     $("#thesis").hover(
         ()=>{$("#thesisComingSoon").show()},() =>{$("#thesisComingSoon").hide()});
     
+    $("#nasa").hover(
+        ()=>{$("#nasaComingSoon").show()},() =>{$("#nasaComingSoon").hide()});
+    
 })
 
 function MidBarResize(){
