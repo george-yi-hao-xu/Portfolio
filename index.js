@@ -92,6 +92,9 @@ $(()=>{
     }
     $(gdWorkContainerElem).html(newJSXgd);
     linkImgDiv("#moreGDWorkBtn","#gdWorkContainer");
+    
+    linkImgDiv("#wlWorkBtn","#wlWorkContainer");
+    linkImgDiv("#thesisWorkBtn","#thesisWorkContainer");
 
     // loading archi div
     const archWorkContainerElem = $("#archWorkContainer");
