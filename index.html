@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | George Y. Xu</title>
+    <title>Home | GEORGE Y. XU</title>
 
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="images/CAF-FiveColor.png">
 
     <!-- style sheet & font -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="progressBar.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rufina&display=swap" rel="stylesheet">
@@ -23,15 +25,16 @@
     <!-- Scrolling effect JS file HERE-->
     <script src="index.js" type="module" defer></script>
     <script src="indexVideoManager.js" type="module" defer></script>
+    <script src="progressBar.js" type="module" defer></script>
     <!-- Header -->
     <div class="header-container white-bottom-border" id="headerContainer">
         <div class="header">
             <div class="logo" >
-                <a href="index.html" id="logoTexts" class="typedElement">George Y. Xu</a>
+                <a href="index.html" id="logoTexts" class="typedElement">G<span class="shrink-text">EORGE</span> Y. X<span class="shrink-text">U</span></a>
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="Files/MyResume-Feb21.pdf" class=" hover-blue" target="_blank">Resume</a></li>
+                    <li><a href="Files/MyResume-Mar5.pdf" class=" hover-blue" target="_blank">Resume</a></li>
                     <li><a href="#workContainer" class=" hover-blue">Work</a></li>
                     <li><a href="index.html" class=" hover-blue">About</a></li>
                 </ul>
@@ -39,7 +42,7 @@
         </div>
     </div>
     <!-- Main -->
-    <main class="orange-bg gradient-appear-fast">
+    <main class="gradient-appear-fast">
         <div class="title-container white-bg" id="titleContainer">
             <div class="title-contents">
                 <div class="type-container">
@@ -56,59 +59,94 @@
                     </div>
                     <!-- email github linkedin -->
                     <p>
-                        <a href="mailto:yxu13@risd.edu" class="hover-yellow">E-Mail</a> 
+                        <a href="mailto:yxu13@risd.edu" class="hover-blue">E-Mail</a> 
                         /
-                        <a href="https://github.com/designasabaker" target="_blank" class="hover-yellow">GitHub</a> 
+                        <a href="https://github.com/designasabaker" target="_blank" class="hover-blue">GitHub</a> 
                         / 
-                        <a href="https://www.linkedin.com/in/yihaoxugeorge-72848121b/?locale=en_US" target="_blank" class="hover-yellow">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/yihaoxugeorge-72848121b/?locale=en_US" target="_blank" class="hover-blue">LinkedIn</a>
                     </p>
                     <div class="exploreWorkBtn risd-blue ">
-                        <a href="#workContainer" class="blueYellowColorGradient bar">Explore the Work</a>
+                        <a href="#workContainer" class="blueYellowColorGradient bar">
+                            E<span class="shrink-text">XPLORE</span> the W<span class="shrink-text">ORK</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
         <div id="fade"></div>
+        <!-- Progress Bar -->
+        <div id="progressBar">
+            <div id="vLine"></div>
+            <div id="barPointer"></div>
+            <div class="block-container">
+                <div class="block" id="block1">
+                    <p>UIUX WEB</p>
+                </div>
+                <div class="block" id="block2">
+                    <p>UIUX XR</p>
+                </div>
+                <div class="block" id="block3">
+                    <p>GRAPHIC DESIGN</p>
+                </div>
+                <div class="block" id="block4">
+                    <p>ARCHITECTURE</p>
+                </div>
+            </div>
+            <!--0.27; 0.58; 0.80-->
+        </div>
         <div>
-            <div class="work-container " id="workContainer">
-                <div class="hr-container">
+            <div class="work-container" id="workContainer">
+                <div class="hr-container reveal">
                     <span class="hr-line"></span>
-                    <div class="hr-text"><span>UI/UX | Web Design & Development</span></div>
+                    <div class="hr-text"><span>U<span class="shrink-text">I</span>/U<span class="shrink-text">X</span>   W<span class="shrink-text">EB</span> D<span class="shrink-text">ESIGN</span> & D<span class="shrink-text">EVELOPMENT</span></span></div>
                     <span class="hr-line"></span>
                 </div>
                 <!-- UIUX Project -->
                 <div class="work-container-row">
                     <!-- 1st work: OSB-->
-                    <div class="single-work ">
+                    <div class="single-work reveal">
                         <div class="img-box">
-                            <a href="singleWorkPages/osb.html" target="_blank"><img  class="img-cover" src="images/osbScreenShot.PNG" alt="osb website"></a>
+                            <a href="singleWorkPages/osb2.html" target="_blank"><img  class="img-cover" src="images/osb/wf-06-rui.PNG" alt="osb website"></a>
                         </div>
-                        <h3>Ocean State Bioactives</h3>
+                        <h3>O<span class="shrink-text">CEAN</span> S<span class="shrink-text">TATE</span> B<span class="shrink-text">IOACTIVES</span></h3>
                         <p class="work-data">Coming soon</p>
                         <p class="work-data">Web Design and Development</p>
                         <p class="work-intro">An online website to promote chemical ingredients to cosmetics and introduce brand stories among RISD and URI community</p>
                     </div>
                     <!-- 2nd work: ECOHOME-->
-                    <div class="single-work">
+                    <div class="single-work reveal">
                         <div class="img-box">
                             <!-- TO DO: Implement the ecohome detailed page-->
-                            <a href="singleWorkPages/ecoHome.html" target="_blank"><img class="img-cover" src="images/ecohome01.PNG" alt="ecohome"></a>
+                            <a href="singleWorkPages/ecoHome2.html" target="_blank"><img class="img-cover" src="images/ecohome01.PNG" alt="ecohome"></a>
                         </div>
-                        <h3>EcoHome</h3>
+                        <h3>E<span class="shrink-text">COHOME</span></h3>
                         <p class="work-data">WS 2022</p>
                         <p class="work-data">App UI/UX Design</p>
                         <p class="work-intro">An energy-saving app by which the user can monitor the daily usage and get notification when emergency</p>
                     </div>
                     
                     <!-- Welight Education App -->
-                    <div class="single-work">
+                    <div class="single-work reveal" id="welight">
                         <div class="img-box">
-                            <a><img class="img-cover" src="images/Solid_white.svg.webp" alt="risd-logo.jpg"></a>
+                            <a><img id="wlWorkBtn" class="img-cover" src="images/wl/register-2.PNG" alt="welight.jpg"></a>
+                            <div class="coming-soon" id="welightComingSoon">
+                                <p>Coming Soon</p>
+                            </div>
                         </div>
                         <h3>Welight Education App</h3>
-                        <p class="work-data">Spring 2023</p>
+                        <p class="work-data">Coming Soon</p>
                         <p class="work-data">App Design & Development</p>
-                        <p class="work-intro">Coming Soon...</p>
+                        <p class="work-intro">An education website serving students, who are going to seek future study abroad</p>
+                    </div>
+                    <div class="moreWorkContainer" id="wlWorkContainer">
+                        <a class="box-close" id="boxCloseBtn"></a>
+                        <p>Under Development</p>
+                        <img class="archWorkImg" src="images/wl/pricing.PNG" alt="">
+                        <img class="archWorkImg" src="images/wl/register-2.PNG" alt="">
+                        <img class="archWorkImg" src="images/wl/register.PNG" alt="">
+                        <img class="archWorkImg" src="images/wl/sign-in.PNG" alt="">
+                        <img class="archWorkImg" src="images/wl/wl-01.png" alt="">
+                        <img class="archWorkImg" src="images/wl/codes.PNG" alt="">
                     </div>
                 </div>
 
@@ -120,17 +158,28 @@
                 </div> -->
                 <div class="work-container-row">
                     <!-- Nim-->
-                    <div class="single-work">
+                    <div class="single-work reveal">
                         <div class="img-box">
-                            <a href="https://designasabaker.github.io/Nim/" target="_blank"><img class="img-cover" src="images/webGame/nim.PNG" alt="nim"></a>
+                            <a href="https://designasabaker.github.io/Nim/" target="_blank"><img class="img-cover" src="images/webGame/nim2.PNG" alt="nim"></a>
                         </div>
                         <h3>Nim</h3>
                         <p class="work-data">Fall 2022 | BrownU</p>
                         <p class="work-data">Web Game Development</p>
                         <p class="work-intro">A basic web game called Nim. It allows two players to fight against each other. </p>
                     </div>
+                    <!-- Chase-->
+                    <div class="single-work reveal">
+                        <div class="img-box">
+                            <a href="https://designasabaker.github.io/meaninglessEscape/" target="_blank"><img class="img-cover" src="images/pizza.PNG" alt="block chasing red dot"></a>
+                        </div>
+                        <h3>Catch</h3>
+                        <p class="work-data">Spring 2022 | RISD</p>
+                        <p class="work-data">Web Game Development</p>
+                        <p class="work-intro"> Try to catch the pizza XD </p>
+                    </div>
+                    <!-- end of chase -->
                     <!-- Connect4-->
-                    <div class="single-work">
+                    <div class="single-work reveal">
                         <div class="img-box">
                             <!-- Connect4 -->
                             <a href="#" id="connect4ImgAnchor"><img class="img-cover" src="images/webGame/connect4-01.PNG" alt="connect4"></a>
@@ -144,38 +193,29 @@
                         <!-- Video container-->
                         
                         <a class="box-close" id="boxCloseBtn"></a>
-                        <video class="videoPlayer" id="connect4Video" controls>
+                        <!-- <video class="videoPlayer" id="connect4Video" controls>
                             <source src="videos/Connect4-Human-vs-Human.mkv" type="video/mp4">
                             
-                        </video>
+                        </video> -->
+                        <iframe class="videoPlayer" id="connect4Video" width="1280" height="720" src="https://www.youtube.com/embed/Q2q96ESaSaU" title="Connect4 Human vs Human" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <!-- end of Connect4 -->
-                    <!-- Chase-->
-                    <div class="single-work">
-                        <div class="img-box">
-                            <a href="https://designasabaker.github.io/blockeatgame/" target="_blank"><img class="img-cover" src="images/webGame/Chase.PNG" alt="block chasing"></a>
-                        </div>
-                        <h3>BlockChasing</h3>
-                        <p class="work-data">Spring 2022 | RISD</p>
-                        <p class="work-data">Web Game Development</p>
-                        <p class="work-intro">Eat as many blocks as possible. </p>
-                    </div>
-                    <!-- end of chase -->
+                    
                 </div>
                 
 
                 <!-- XR Project -->
-                <div class="hr-container">
+                <div class="hr-container reveal">
                     <span class="hr-line"></span>
-                    <div class="hr-text"><span>UI/UX | XR Development</span></div>
+                    <div class="hr-text"><span>UI/UX | XR DEVELOPMENT</span></div>
                     <span class="hr-line"></span>
                 </div>
                 <div class="work-container-row">
                     <!--Shé:kon-->
-                    <div class="single-work">
+                    <div class="single-work reveal">
                         <div class="img-box">
                             <!-- <a href="https://youtu.be/iQuNsEEnoFI" target="_blank"><img class="img-cover" src="images/shekon.PNG" alt="shekon"></a> -->
-                            <a href="#" id="shekonImgAnchor"><img class="img-cover" src="images/shekon-2.jpg" alt="shekon-2.jpg"></a>
+                            <a href="#" id="shekonImgAnchor"><img class="img-cover" src="images/XR.jpg" alt="shekon xr class.jpg"></a>
                         </div>
                         <h3>Shé:kon</h3>
                         <p class="work-data">Spring 2023</p>
@@ -186,27 +226,40 @@
                         <!-- Video container-->
                         
                         <a class="box-close" id="boxCloseBtn"></a>
-                        <video class="videoPlayer" id="shekonVideo" src="videos/shekon.mp4" controls>
+                        <!-- <video class="videoPlayer" id="shekonVideo" src="videos/shekon.mp4" controls>
                             <source src="videos/shekon.mp4" type="video/mp4">
-                            
-                        </video>
+                        </video> -->
+                        <iframe class="videoPlayer" id="shekonVideo" width="1280" height="721" src="https://www.youtube.com/embed/T1MG7LQY81g" title="Shekon VR Project Videoshot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <!-- <img src="images/XR.jpg" alt="XR Phote"> -->
                     </div>
             
                     <!-- end Shekon -->
 
                     <!-- NASA-->
-                    <div class="single-work">
+                    <div class="single-work reveal" id="nasa">
                         <div class="img-box">
-                            <a><img class="img-cover" src="images/nasa-logo.jpg" alt="nasa ar development"></a>
+                            <a href="#" id="nasaImgAnchor"><img class="img-cover" src="images/nasa.PNG" alt="nasa ar development"></a>
+                            <!-- <div class="coming-soon" id="nasaComingSoon">
+                                <p>Coming Soon</p>
+                            </div> -->
                         </div>
                         <h3>Nasa Suit AR Challenge</h3>
                         <p class="work-data">Spring 2023</p>
                         <p class="work-data">AR Development</p>
                         <p class="work-intro">Coming Soon...</p>
                     </div>
-
+                    <div class="video-container gradient-appear" id="nasaVideoBox">
+                        <!-- Video container-->
+                        
+                        <a class="box-close" id="boxCloseBtn"></a>
+                        <!-- <video class="videoPlayer" id="connect4Video" controls>
+                            <source src="videos/Connect4-Human-vs-Human.mkv" type="video/mp4">
+                            
+                        </video> -->
+                        <iframe class="videoPlayer" id="nasaVideo" width="560" height="315" src="https://www.youtube.com/embed/xIej7sy0ePo?start=145" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
                     <!-- Aug Shooting Range-->
-                    <div class="single-work">
+                    <div class="single-work reveal">
                         <div class="img-box">
                             <a href="#" id="augImgAnchor"><img class="img-cover" src="images/aug.png" alt="aug shooting range"></a>
                         </div>
@@ -219,16 +272,16 @@
                         <!-- Video container-->
                         
                         <a class="box-close" id="boxCloseBtn"></a>
-                        <video class="videoPlayer" id="augVideo" src="videos/aug.mp4" controls>
+                        <!-- <video class="videoPlayer" id="augVideo" src="videos/aug.mp4" controls>
                             <source src="videos/aug.mp4" type="video/mp4">
-                            
-                        </video>
+                        </video> -->
+                        <iframe class="videoPlayer" id="augVideo" width="455" height="809" src="https://www.youtube.com/embed/oXG8qh6X67I" title="FPS VR AugA3" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <!-- END: Aug Shooting Range-->
                 </div>
                 <div class="work-container-row">
                     <!-- Cross the Pell -->
-                    <div class="single-work">
+                    <div class="single-work reveal">
                         <div class="img-box">
                             <a href="Files/pell-part.pdf" target="_blank"><img class="img-cover" src="images/pell-menu.PNG" alt="pell-menu.jpg"></a>
                         </div>
@@ -237,32 +290,92 @@
                         <p class="work-data">VR Development</p>
                         <p class="work-intro">Riding towards the Pell Bridge in Rhode Island on a real bike with Quest2</p>
                     </div>
+                    <div class="moreWorkContainer" id="ctpWorkContainer">
+                        <a class="box-close" id="boxCloseBtn"></a>
+                        <img class="archWorkImg" src="images/archi/ar_Page_01.jpg" alt="">
+                        <!-- <img class="archWorkImg" src="images/archi/ar_Page_01.jpg" alt=""> -->
+                    </div>
                     <!-- Design Thesis -->
-                    <div class="single-work">
+                    <div class="single-work reveal" id="thesis">
                         <div class="img-box">
-                            <a><img class="img-cover" src="images/3d-01.PNG" alt="aug shooting range"></a>
+                            <a><img id="thesisWorkBtn" class="img-cover" src="images/fpshop/Crystal-02.PNG" alt="aug shooting range"></a>
+                            <div class="coming-soon" id="thesisComingSoon">
+                                <p>Coming Soon</p>
+                            </div>
                         </div>
-                        <h3>Thesis: Virtual Commercial Space</h3>
+                        <h3>RISD Design Thesis: Virtual Commercial Space</h3>
                         <p class="work-data">Spring 2023</p>
-                        <p class="work-data">VR Development</p>
+                        <p class="work-data">Unity Design and Development</p>
                         <p class="work-intro">Coming soon... </p>
                     </div>
+                    <div class="moreWorkContainer" id="thesisWorkContainer">
+                        <a class="box-close" id="boxCloseBtn"></a>
+                        <p class="white-bg">Under Development</p><br><hr>
+                        <p class="white-bg">User Story 01 - Jewelry
+
+                            One day, Jane was browsing the internet for some new jewelry to add to her collection. As she searched through different online stores, she stumbled upon a website that caught her eye. The website had a sleek design and showcased a variety of unique and trendy jewelry pieces.
+                            
+                            As Jane continued to explore the online jewelry store, she stumbled upon something even more exciting - the jewelry metaverse. She clicked on the link and was transported to a virtual world filled with glittering jewels, sparkling diamonds, and shining gold.
+                            
+                            The metaverse was like a paradise for jewelry lovers. There were special effects and animations everywhere, making Jane feel like she was walking through a dream. She could interact with different jewelry pieces and see how they would look on her in real-time.
+                            
+                            But the most exciting part of the metaverse was the ability to create her own jewelry designs. Jane was able to use a 3D design tool to create custom pieces, experimenting with different metals, gemstones, and shapes. She could see her designs come to life right before her eyes, and she felt a sense of accomplishment knowing that she had made something truly unique.
+                            
+                            One day, Jane decided to try out the live chat feature in the metaverse. She was connected with an agent from a physical store who could help her with any questions or concerns she had about her purchase. The agent was friendly and knowledgeable, and Jane appreciated being able to get real-time help from someone who knew the products well.
+                            
+                            In the end, Jane was thrilled with her online jewelry shopping experience. She loved the convenience and endless options of the website, and she was blown away by the creativity and personalization of the metaverse. She knew that she would continue to shop at the online jewelry store, creating new custom pieces and exploring the metaverse whenever she needed a bit of sparkle in her life.
+                            </p><br>
+                        <p class="white-bg">User Story 02 - Clothes 
+
+                            Mia had always been skeptical of virtual shopping apps, preferring to see and feel the clothes in person before making a purchase. However, when she visited a new physical store and saw the QR codes on the clothes, she couldn't resist giving the virtual app a try.
+                            
+                            As she explored the virtual store, she was impressed by the level of detail provided by the app, which gave her information about the fabric, fit, and style of each garment. But the real surprise came when she noticed an AI assistant pop up on the app. The AI, which introduced itself as "Simone," offered Mia personalized recommendations based on her style preferences and shopping history. It also provided her with the carbon footprint of each item she scanned, allowing her to make more environmentally-conscious choices.
+                            
+                            Mia was impressed by Simone's ability to suggest items that she loved, but also items that she may not have considered before. She found herself spending more time on the app, excited to see what Simone would recommend next.
+                            
+                            As she continued to shop, Simone also provided Mia with helpful tips and advice on how to style different pieces of clothing. With Simone's guidance, Mia was able to create her own unique looks that she loved.
+                            
+                            Mia had a fantastic time exploring the virtual store and working with Simone, the AI assistant. She left the physical store feeling happy with her purchases and excited to see what Simone would recommend next time.
+                            
+                            As she walked out of the store, Mia couldn't help but think about the environmental impact of her purchases. She remembered seeing the carbon footprint information provided by Simone in the virtual store, and she wanted to share that information with her friends and followers.
+                            
+                            So, Mia went home and opened her Instagram app. She posted a picture of her avatar, along with a caption explaining her experience at the virtual store and the importance of making environmentally-conscious shopping choices. She also shared the saved carbon footprint information provided by Simone for each item she had purchased.
+                            
+                            The post received a lot of attention from her followers, who were impressed by the level of detail provided by the virtual store and the importance of making sustainable choices. Mia was thrilled to see that her post had inspired others to think more critically about their shopping habits.
+                            
+                            In the end, Mia was grateful for the balance of physical and virtual shopping provided by the store and the AI assistant. She felt good about her purchases and the positive impact they would have on the environment. And she was excited to continue exploring the virtual store and working with Simone to create more personalized and sustainable fashion choices.
+                            </p><br>
+                        <p class="white-bg">Mall
+
+                            The rise of the metaverse may pose a threat to traditional malls as consumers may increasingly choose to shop and socialize in virtual environments rather than physical ones. However, malls have a number of options to adapt and compete in this new landscape:
+                            
+                            1.Create experiential spaces: Malls can offer experiences that cannot be replicated in the metaverse, such as hosting events, providing unique dining options, and offering entertainment attractions like movie theaters and arcades. SPA, healing, exercising(gym, pool
+                            
+                            2.Partner with metaverse platforms: Malls can explore partnerships with metaverse platforms to create virtual storefronts or experiences that bridge the physical and virtual worlds.
+                            
+                            3.Reimagine the mall concept: Malls can rethink their business models and consider transforming their spaces into mixed-use developments that include residential, office, and retail spaces.
+                            
+                            4.Focus on local and independent retailers: Malls can differentiate themselves from online and metaverse retailers by offering a curated selection of local and independent retailers, which can provide a unique and personalized shopping experience.
+                            
+                            Overall, the mall will need to adapt to changing consumer preferences and embrace new technologies and business models in order to remain relevant in the metaverse era.
+                            </p>
+                    </div>
                     <!-- Place Holder -->
-                    <div class="single-work-place-holder">
+                    <div class="single-work-place-holder reveal">
                         <p>Coming Soon</p>
                     </div>
                 </div>
 
                 
                 <!-- GD Work -->
-                <div class="hr-container">
+                <div class="hr-container reveal">
                     <span class="hr-line"></span>
                     <div class="hr-text"><span>Graphic Design</span></div>
                     <span class="hr-line"></span>
                 </div>
                 <div class="work-container-row">
                     <!-- work: Data Visualization-->
-                    <div class="single-work">
+                    <div class="single-work reveal">
                         <div class="img-box">
                             <a href="https://www.oiss.risd.edu/coming-to-statistics-2022" target="_blank"><img class="img-cover" src="images/gd/data-visualization.PNG" alt="data visualization"></a>
                         </div>
@@ -272,7 +385,7 @@
                         <p class="work-intro">Each year there are countless international students coming to RISD. ISSA produces intuitive visualizations based on reliable and solid data.It is hoped that with the help of data visualization tools, students and their parents can better understand the situation of the school.</p>
                     </div>
                     <!-- work: Banner-->
-                    <div class="single-work">
+                    <div class="single-work reveal">
                         <div class="img-box">
                             <a href="https://www.instagram.com/p/CiF6aCxuTY5/?utm_source=ig_web_copy_link" target="_blank"><img class="img-cover" src="images/gd/banner-real.jpg" alt="risd banner"></a>
                         </div>
@@ -282,7 +395,7 @@
                         <p class="work-intro">Every new school year begins with many international students coming to RISD. The office will create beautiful banners to welcome these students and congratulate them on coming</p>
                     </div>
                     <!-- work: More gd work-->
-                    <a href="#" class="more-work bar-dark hover-blue" id="moreGDWorkBtn">
+                    <a href="#" class="more-work bar-dark hover-blue reveal" id="moreGDWorkBtn">
                         <p class="hover-blue">More Graphic Design Work</p>
                     </a>
                     <div class="moreWorkContainer" id="gdWorkContainer">
@@ -292,14 +405,14 @@
                 </div>
 
                 <!-- Architecture Project -->
-                <div class="hr-container">
+                <div class="hr-container reveal">
                     <span class="hr-line"></span>
                     <div class="hr-text"><span>Architecture Work</span></div>
                     <span class="hr-line"></span>
                 </div>
                 <div class="work-container-row">
                     <!-- Biomimicry Service Design-->
-                    <div class="single-work">
+                    <div class="single-work reveal">
                         <div class="img-box">
                             <a href="Files/biomimicry-maze.pdf" target="_blank"><img class="img-cover" src="images/biomimicry-drawing.PNG" alt="biomimicry-drawing.png"></a>
                         </div>
@@ -309,7 +422,7 @@
                         <p class="work-intro">Serving the museum's mission: to inspire appreciation, understanding, and stewardship of our natural environment and wildlife through discovery and learning, as well. </p>
                     </div>
                     <!-- Magic Carpet -->
-                    <div class="single-work">
+                    <div class="single-work reveal">
                         <div class="img-box">
                             <!-- Connect4 -->
                             <a href="Files/magic-carpet-parametric-design.pdf" target="_blank"><img class="img-cover" src="images/magic-carpet-parametric-design.jpg" alt="magic-carpet.jpg"></a>
@@ -320,7 +433,7 @@
                         <p class="work-intro">Structural Design with the help of recursion algorithm</p>
                     </div>
                     <!-- more work -->
-                    <a class="more-work bar-dark hover-blue" id="moreArchiWorkBtn">
+                    <a class="more-work bar-dark hover-blue reveal" id="moreArchiWorkBtn">
                         <p class="hover-blue">More Works on Architecture</p>
                     </a>
                     <div class="moreWorkContainer" id="archWorkContainer">

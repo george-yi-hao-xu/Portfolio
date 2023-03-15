@@ -1,4 +1,5 @@
 import {linkImgDiv} from "./indexVideoManager.js";
+import { reveal } from "./reveal.js";
 
 $(()=>{
     const headerElement = $("#headerContainer");
@@ -35,7 +36,7 @@ $(()=>{
 
     // adding typing effects to #typed in index.html
     try{
-        TypingEffect("#typed",["<h1>Welcome!</h1>", "<h1 id='typed-strings'><span> I'm </span><abbr title='George Yihao Xu'>George</abbr></h1>"]);
+        TypingEffect("#typed",["<h1>Welcome!</h1>", "<h1 id='typed-strings'><span> I'm </span><abbr title='George Yihao Xu'>George Yihao Xu</abbr></h1>"]);
     }catch{
         console.log("no element called typed")
     }
@@ -47,7 +48,7 @@ $(()=>{
     }
     // adding typing effects to #typedEcoHome in ecoHome.html
     try{
-        TypingEffect("#typedEcoHome", ["<h1><abbr class='risd-yellow'>E</abbr>co <abbr class='risd-yellow'>H</abbr>ome</h1>", "<h1>RISD Academic Work</h1>"])
+        TypingEffect("#typedEcoHome", ["<h1><abbr class='risd-yellow'>E</abbr><span class='shrink-text grey'>CO</span> <abbr class='risd-yellow'>H</abbr><span class='shrink-text grey'>OME</span></h1>", "<h1>RISD Academic Work</h1>"])
     }catch{
         console.log("no element called typedEcoHome")
     }
@@ -73,6 +74,10 @@ $(()=>{
     const osbWFimg2 = $("#osbWFimg2");
     HoverHide(osbWFimg1,osbWFimg2);
     HoverHide(osbWFimg2,osbWFimg1);
+    // const osbHiFiImg1 = $("#osbHiFiImg1");
+    // const osbHiFiImg2 = $("#osbHiFiImg2");
+    // HoverHide(osbHiFiImg1,osbHiFiImg2);
+    // HoverHide(osbHiFiImg2,osbHiFiImg1);
 
     // loading GD div
     const gdWorkContainerElem = $("#gdWorkContainer");
@@ -83,10 +88,13 @@ $(()=>{
         // }else{
         //     newJSXgd += `<img class='archWorkImg' src='images/archi/ar_Page_${i}.jpg' alt='archi${i}.jpg'>`;
         // }
-        newJSXgd += `<img class='archWorkImg' src='images/moregd/${i}.png' alt='moregd${i}.png'>`;
+        newJSXgd += `<img class='archWorkImg' src='images/moregd/${i}.jpg' alt='moregd${i}.jpg'>`;
     }
     $(gdWorkContainerElem).html(newJSXgd);
     linkImgDiv("#moreGDWorkBtn","#gdWorkContainer");
+    
+    linkImgDiv("#wlWorkBtn","#wlWorkContainer");
+    linkImgDiv("#thesisWorkBtn","#thesisWorkContainer");
 
     // loading archi div
     const archWorkContainerElem = $("#archWorkContainer");
@@ -101,6 +109,19 @@ $(()=>{
     $(archWorkContainerElem).html(newJSX);
     linkImgDiv("#moreArchiWorkBtn","#archWorkContainer");
 
+    // loading animation
+    window.addEventListener("scroll", reveal);
+
+    // hover welight to show coming soon
+    $("#welight").hover(
+        ()=>{$("#welightComingSoon").show()},() =>{$("#welightComingSoon").hide()});
+    
+    $("#thesis").hover(
+        ()=>{$("#thesisComingSoon").show()},() =>{$("#thesisComingSoon").hide()});
+    
+    $("#nasa").hover(
+        ()=>{$("#nasaComingSoon").show()},() =>{$("#nasaComingSoon").hide()});
+    
 })
 
 function MidBarResize(){
@@ -163,3 +184,20 @@ function TypingEffect(idStr,contentStrList){
             console.log("no such element called " + idStr);
         }
 }
+
+// loading animation
+// export function reveal() {
+//     var reveals = document.querySelectorAll(".reveal");
+  
+//     for (var i = 0; i < reveals.length; i++) {
+//       var windowHeight = window.innerHeight;
+//       var elementTop = reveals[i].getBoundingClientRect().top;
+//       var elementVisible = 60; // how sensitive. smaller -> earlier to load elem
+  
+//       if (elementTop < windowHeight - elementVisible) {
+//         reveals[i].classList.add("active");
+//       } else {
+//         reveals[i].classList.remove("active");
+//       }
+//     }
+//   }
