@@ -761,6 +761,7 @@ main a{
 .work-intro{
     font-size: var(--font-size-body-small);
     margin:10px 0 30px 0;
+    text-align: left !important;
 }
 
 /* content */
