@@ -99,7 +99,7 @@ $(()=>{
     // loading archi div
     const archWorkContainerElem = $("#archWorkContainer");
     let newJSX = "";
-    for(let i = 1; i <= 25; i++){
+    for(let i = 8; i <= 25; i++){
         if(i<=9){
             newJSX += `<img class='archWorkImg' src='images/archi/ar_Page_0${i}.jpg' alt='archi${i}.jpg'>`;
         }else{
