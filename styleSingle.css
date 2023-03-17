@@ -53,12 +53,14 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 0;
-
 }
 
 main a{
     color:var(--color-blue-grey);
+}
+
+p{
+    z-index: 0;
 }
 
 .hide{
@@ -70,7 +72,6 @@ main a{
     display: block;
     position: fixed;
     top: 0;
-    z-index: 100;
     width: 100%;
     height: var(--height-header-container);
 
@@ -180,7 +181,6 @@ become yellow when hover
     margin: 0 auto;
     width: 900px;
     height: 100px;
-    z-index: 18;
     text-align: left;
 }
 
@@ -188,7 +188,6 @@ become yellow when hover
     display: block;
     margin: 0 auto;
     width: 900px;
-    z-index: 16;
     text-align: left;
 }
 
@@ -479,7 +478,6 @@ become yellow when hover
     left: 0;
     margin: 5px 0;
     padding: 0 5px;;
-    z-index: 50;
     max-width: 90%;
 }
 
@@ -929,11 +927,10 @@ footer a{
     padding: 0 1px;
     transition: 500ms ease;
     border-radius: 10%;
-    z-index: 0;
 }
 .img-small:hover{
-    transform: scale(2);
-    z-index: 100;
+    transform: scale(4);
+    z-index: 1000 !important;
     border: none;
     box-shadow: 0 0 200px 100px white;
 }
@@ -945,7 +942,6 @@ footer a{
     padding: 0 1px;
     transition: 500ms ease;
     border-radius: 10%;
-    z-index: 0;
 }
 .img-base-fixedWidth{
     position: relative;
@@ -956,7 +952,6 @@ footer a{
     padding: 0 1px;
     transition: 500ms ease;
     border-radius: 10%;
-    z-index: 0;
 }
 .img-base:hover{
     /* position: fixed;
@@ -964,8 +959,8 @@ footer a{
     top:50vh;
     left:50vw;
     transform: translate(-50%,-50%); */
-    transform: scale(2);
-    z-index: 100;
+    transform: scale(4);
+    z-index: 1000 !important;
     /* border: none; */
     border: 2px white solid;
     box-shadow: 0 0 200px 100px white;
